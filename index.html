@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Climate Crisis Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+    .button {
+      background-color: #a2cfe6e0;
+      border: none;
+      color: rgb(24, 22, 22);
+      padding: 8px 4px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 2px 1px;
+      cursor: pointer;
+    }
+ 
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="row">
+        <div style="background: url(./Resources/carbon-footprint.jpg)" class="col-md-12 jumbotron text-center">
+          <h1>Carbon Emission Analysis</h1>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-2">
+            <h5 style="font-weight: bold; font-size: 18px">Period of emission</h5>
+            <select id="selPeriod" style="font-weight: bold; font-size: 15px ">
+                <option value="default" style="font-weight: bold; font-size: 15px ">Select an option</option>
+                <option value="totalEmission" style="font-weight: bold; font-size: 15px ">Total Emissions</option>
+                <option value="currentEmission" style="font-weight: bold; font-size: 15px ">Countries that emit the most CO2 today</option>
+                <option value="historyEmission" style="font-weight: bold; font-size: 15px ">Countries that emitted the most CO2 in the past</option>
+                <option value="emissionPerPerson" style="font-weight: bold; font-size: 15px ">Countries that emit the most CO2 per person today</option>
+            </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="total-emissions"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+           <button class="button" id="map-button">Map</button>
+        </div>
+        <div class="col-md-1">
+          <button class="button" id="chart-button">Chart</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-15">
+          <div id="map"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="line"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="barPeriod"></div>
+          </div>
+      </div>
+    </div>
+  
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./js/app.js"></script>
+    <!-- <script src="./static/js/bonus.js"></script> -->
+  
+  </body>
+  
+  </html>
+  
